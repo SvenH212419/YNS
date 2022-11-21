@@ -2,6 +2,159 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v13.0": {
+      "DnsClient/1.6.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/DnsClient.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/DnsClient.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Win32.Registry/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Security.AccessControl": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "MongoDB.Bson/2.18.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/MongoDB.Bson.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MongoDB.Bson.dll": {}
+        }
+      },
+      "MongoDB.Driver/2.18.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "MongoDB.Bson": "2.18.0",
+          "MongoDB.Driver.Core": "2.18.0",
+          "MongoDB.Libmongocrypt": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/MongoDB.Driver.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MongoDB.Driver.dll": {}
+        }
+      },
+      "MongoDB.Driver.Core/2.18.0": {
+        "type": "package",
+        "dependencies": {
+          "DnsClient": "1.6.1",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "MongoDB.Bson": "2.18.0",
+          "MongoDB.Libmongocrypt": "1.6.0",
+          "SharpCompress": "0.30.1",
+          "Snappier": "1.0.0",
+          "System.Buffers": "4.5.1",
+          "ZstdSharp.Port": "0.6.2"
+        },
+        "compile": {
+          "lib/netstandard2.1/MongoDB.Driver.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MongoDB.Driver.Core.dll": {}
+        }
+      },
+      "MongoDB.Libmongocrypt/1.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/MongoDB.Libmongocrypt.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MongoDB.Libmongocrypt.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "build/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux/native/libmongocrypt.so": {
+            "assetType": "native",
+            "rid": "linux"
+          },
+          "runtimes/osx/native/libmongocrypt.dylib": {
+            "assetType": "native",
+            "rid": "osx"
+          },
+          "runtimes/win/native/mongocrypt.dll": {
+            "assetType": "native",
+            "rid": "win"
+          }
+        }
+      },
+      "SharpCompress/0.30.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Encoding.CodePages": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/SharpCompress.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/SharpCompress.dll": {}
+        }
+      },
+      "Snappier/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/Snappier.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Snappier.dll": {}
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -9,6 +162,63 @@
         },
         "runtime": {
           "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Security.AccessControl/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Security.AccessControl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.AccessControl.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Security.Principal.Windows/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Security.Principal.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "Xamarin.AndroidX.Activity/1.2.4.1": {
@@ -34,14 +244,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Activity.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Activity.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Activity.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Activity.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Activity.targets": {}
@@ -63,14 +269,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Annotation.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Annotation.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Annotation.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Annotation.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Annotation.targets": {}
@@ -89,14 +291,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Annotation.Experimental.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Annotation.Experimental.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Annotation.Experimental.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Annotation.Experimental.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Annotation.Experimental.targets": {}
@@ -128,14 +326,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.AppCompat.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.AppCompat.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.AppCompat.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.AppCompat.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.AppCompat.targets": {}
@@ -161,14 +355,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.AppCompat.AppCompatResources.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.AppCompat.AppCompatResources.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.AppCompat.AppCompatResources.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.AppCompat.AppCompatResources.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.AppCompat.AppCompatResources.targets": {}
@@ -190,14 +380,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Arch.Core.Common.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Arch.Core.Common.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Arch.Core.Common.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Arch.Core.Common.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Arch.Core.Common.targets": {}
@@ -220,14 +406,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Arch.Core.Runtime.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Arch.Core.Runtime.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Arch.Core.Runtime.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Arch.Core.Runtime.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Arch.Core.Runtime.targets": {}
@@ -250,14 +432,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.AsyncLayoutInflater.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.AsyncLayoutInflater.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.AsyncLayoutInflater.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.AsyncLayoutInflater.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.AsyncLayoutInflater.targets": {}
@@ -284,14 +462,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Browser.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Browser.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Browser.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Browser.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Browser.targets": {}
@@ -313,14 +487,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.CardView.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.CardView.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.CardView.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.CardView.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.CardView.targets": {}
@@ -342,14 +512,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Collection.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Collection.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Collection.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Collection.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Collection.targets": {}
@@ -372,14 +538,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Concurrent.Futures.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Concurrent.Futures.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Concurrent.Futures.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Concurrent.Futures.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Concurrent.Futures.targets": {}
@@ -403,14 +565,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.ConstraintLayout.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.ConstraintLayout.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.ConstraintLayout.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.ConstraintLayout.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.ConstraintLayout.targets": {}
@@ -429,14 +587,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.ConstraintLayout.Core.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.ConstraintLayout.Core.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.ConstraintLayout.Core.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.ConstraintLayout.Core.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.ConstraintLayout.Core.targets": {}
@@ -461,14 +615,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.CoordinatorLayout.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.CoordinatorLayout.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.CoordinatorLayout.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.CoordinatorLayout.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.CoordinatorLayout.targets": {}
@@ -494,14 +644,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Core.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Core.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Core.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Core.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Core.targets": {}
@@ -523,14 +669,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.CursorAdapter.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.CursorAdapter.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.CursorAdapter.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.CursorAdapter.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.CursorAdapter.targets": {}
@@ -554,14 +696,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.CustomView.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.CustomView.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.CustomView.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.CustomView.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.CustomView.targets": {}
@@ -583,14 +721,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.DocumentFile.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.DocumentFile.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.DocumentFile.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.DocumentFile.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.DocumentFile.targets": {}
@@ -614,14 +748,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.DrawerLayout.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.DrawerLayout.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.DrawerLayout.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.DrawerLayout.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.DrawerLayout.targets": {}
@@ -645,14 +775,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.DynamicAnimation.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.DynamicAnimation.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.DynamicAnimation.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.DynamicAnimation.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.DynamicAnimation.targets": {}
@@ -684,14 +810,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Fragment.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Fragment.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Fragment.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Fragment.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Fragment.targets": {}
@@ -713,14 +835,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Interpolator.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Interpolator.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Interpolator.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Interpolator.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Interpolator.targets": {}
@@ -753,14 +871,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Legacy.Support.Core.UI.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Legacy.Support.Core.UI.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Legacy.Support.Core.UI.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Legacy.Support.Core.UI.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Legacy.Support.Core.UI.targets": {}
@@ -787,14 +901,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Legacy.Support.Core.Utils.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Legacy.Support.Core.Utils.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Legacy.Support.Core.Utils.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Legacy.Support.Core.Utils.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Legacy.Support.Core.Utils.targets": {}
@@ -820,14 +930,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Legacy.Support.V4.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Legacy.Support.V4.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Legacy.Support.V4.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Legacy.Support.V4.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Legacy.Support.V4.targets": {}
@@ -849,14 +955,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.Common.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.Common.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.Common.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.Common.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Lifecycle.Common.targets": {}
@@ -880,14 +982,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.LiveData.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.LiveData.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.LiveData.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.LiveData.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Lifecycle.LiveData.targets": {}
@@ -911,14 +1009,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.LiveData.Core.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.LiveData.Core.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.LiveData.Core.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.LiveData.Core.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Lifecycle.LiveData.Core.targets": {}
@@ -943,14 +1037,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.Runtime.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.Runtime.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.Runtime.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.Runtime.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Lifecycle.Runtime.targets": {}
@@ -972,14 +1062,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.ViewModel.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.ViewModel.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.ViewModel.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.ViewModel.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Lifecycle.ViewModel.targets": {}
@@ -1004,14 +1090,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.ViewModelSavedState.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.ViewModelSavedState.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.ViewModelSavedState.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Lifecycle.ViewModelSavedState.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Lifecycle.ViewModelSavedState.targets": {}
@@ -1037,14 +1119,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Loader.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Loader.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Loader.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Loader.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Loader.targets": {}
@@ -1066,14 +1144,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.LocalBroadcastManager.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.LocalBroadcastManager.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.LocalBroadcastManager.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.LocalBroadcastManager.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.LocalBroadcastManager.targets": {}
@@ -1097,14 +1171,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Media.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Media.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Media.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Media.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Media.targets": {}
@@ -1132,14 +1202,10 @@
           "Java.Interop"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.MultiDex.dll": {
-            "related": ".pdb"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.MultiDex.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.MultiDex.dll": {
-            "related": ".pdb"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.MultiDex.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.MultiDex.targets": {}
@@ -1163,14 +1229,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Navigation.Common.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Navigation.Common.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Navigation.Common.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Navigation.Common.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Navigation.Common.targets": {}
@@ -1196,14 +1258,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Navigation.Runtime.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Navigation.Runtime.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Navigation.Runtime.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Navigation.Runtime.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Navigation.Runtime.targets": {}
@@ -1229,14 +1287,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Navigation.UI.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Navigation.UI.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Navigation.UI.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Navigation.UI.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Navigation.UI.targets": {}
@@ -1263,14 +1317,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Preference.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Preference.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Preference.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Preference.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Preference.targets": {}
@@ -1292,14 +1342,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Print.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Print.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Print.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Print.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Print.targets": {}
@@ -1324,14 +1370,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.RecyclerView.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.RecyclerView.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.RecyclerView.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.RecyclerView.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.RecyclerView.targets": {}
@@ -1355,14 +1397,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.SavedState.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.SavedState.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.SavedState.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.SavedState.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.SavedState.targets": {}
@@ -1386,14 +1424,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.SlidingPaneLayout.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.SlidingPaneLayout.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.SlidingPaneLayout.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.SlidingPaneLayout.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.SlidingPaneLayout.targets": {}
@@ -1417,14 +1451,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.SwipeRefreshLayout.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.SwipeRefreshLayout.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.SwipeRefreshLayout.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.SwipeRefreshLayout.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.SwipeRefreshLayout.targets": {}
@@ -1446,14 +1476,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Tracing.Tracing.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Tracing.Tracing.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Tracing.Tracing.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Tracing.Tracing.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Tracing.Tracing.targets": {}
@@ -1478,14 +1504,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.Transition.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Transition.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.Transition.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.Transition.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.Transition.targets": {}
@@ -1509,14 +1531,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.VectorDrawable.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.VectorDrawable.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.VectorDrawable.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.VectorDrawable.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.VectorDrawable.targets": {}
@@ -1540,14 +1558,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.VectorDrawable.Animated.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.VectorDrawable.Animated.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.VectorDrawable.Animated.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.VectorDrawable.Animated.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.VectorDrawable.Animated.targets": {}
@@ -1570,14 +1584,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.VersionedParcelable.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.VersionedParcelable.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.VersionedParcelable.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.VersionedParcelable.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.VersionedParcelable.targets": {}
@@ -1601,14 +1611,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.ViewPager.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.ViewPager.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.ViewPager.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.ViewPager.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.ViewPager.targets": {}
@@ -1634,14 +1640,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.AndroidX.ViewPager2.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.ViewPager2.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.AndroidX.ViewPager2.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.AndroidX.ViewPager2.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.ViewPager2.targets": {}
@@ -1657,14 +1659,10 @@
           "Java.Interop"
         ],
         "compile": {
-          "lib/monoandroid10.0/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid10.0/Xamarin.Essentials.dll": {}
         },
         "runtime": {
-          "lib/monoandroid10.0/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid10.0/Xamarin.Essentials.dll": {}
         }
       },
       "Xamarin.Forms/5.0.0.2196": {
@@ -1681,38 +1679,18 @@
           "Xamarin.Google.Android.Material": "[1.4.0.2, 1.5.0)"
         },
         "compile": {
-          "lib/MonoAndroid10.0/FormsViewGroup.dll": {
-            "related": ".pdb"
-          },
-          "lib/MonoAndroid10.0/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/MonoAndroid10.0/Xamarin.Forms.Platform.Android.dll": {
-            "related": ".pdb"
-          },
-          "lib/MonoAndroid10.0/Xamarin.Forms.Platform.dll": {
-            "related": ".Android.pdb"
-          },
-          "lib/MonoAndroid10.0/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/MonoAndroid10.0/FormsViewGroup.dll": {},
+          "lib/MonoAndroid10.0/Xamarin.Forms.Core.dll": {},
+          "lib/MonoAndroid10.0/Xamarin.Forms.Platform.Android.dll": {},
+          "lib/MonoAndroid10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/MonoAndroid10.0/Xamarin.Forms.Xaml.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid10.0/FormsViewGroup.dll": {
-            "related": ".pdb"
-          },
-          "lib/MonoAndroid10.0/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/MonoAndroid10.0/Xamarin.Forms.Platform.Android.dll": {
-            "related": ".pdb"
-          },
-          "lib/MonoAndroid10.0/Xamarin.Forms.Platform.dll": {
-            "related": ".Android.pdb"
-          },
-          "lib/MonoAndroid10.0/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/MonoAndroid10.0/FormsViewGroup.dll": {},
+          "lib/MonoAndroid10.0/Xamarin.Forms.Core.dll": {},
+          "lib/MonoAndroid10.0/Xamarin.Forms.Platform.Android.dll": {},
+          "lib/MonoAndroid10.0/Xamarin.Forms.Platform.dll": {},
+          "lib/MonoAndroid10.0/Xamarin.Forms.Xaml.dll": {}
         },
         "build": {
           "buildTransitive/Xamarin.Forms.props": {},
@@ -1748,14 +1726,10 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid90/Xamarin.Google.Android.Material.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.Google.Android.Material.dll": {}
         },
         "runtime": {
-          "lib/monoandroid90/Xamarin.Google.Android.Material.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/monoandroid90/Xamarin.Google.Android.Material.dll": {}
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.Google.Android.Material.targets": {}
@@ -1776,6 +1750,18 @@
           "buildTransitive/monoandroid50/Xamarin.Google.Guava.ListenableFuture.targets": {}
         }
       },
+      "ZstdSharp.Port/0.6.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/ZstdSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/ZstdSharp.dll": {}
+        }
+      },
       "YNS/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1793,6 +1779,243 @@
     }
   },
   "libraries": {
+    "DnsClient/1.6.1": {
+      "sha512": "4H/f2uYJOZ+YObZjpY9ABrKZI+JNw3uizp6oMzTXwDw6F+2qIPhpRl/1t68O/6e98+vqNiYGu+lswmwdYUy3gg==",
+      "type": "package",
+      "path": "dnsclient/1.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dnsclient.1.6.1.nupkg.sha512",
+        "dnsclient.nuspec",
+        "icon.png",
+        "lib/net45/DnsClient.dll",
+        "lib/net45/DnsClient.xml",
+        "lib/net471/DnsClient.dll",
+        "lib/net471/DnsClient.xml",
+        "lib/net5.0/DnsClient.dll",
+        "lib/net5.0/DnsClient.xml",
+        "lib/netstandard1.3/DnsClient.dll",
+        "lib/netstandard1.3/DnsClient.xml",
+        "lib/netstandard2.0/DnsClient.dll",
+        "lib/netstandard2.0/DnsClient.xml",
+        "lib/netstandard2.1/DnsClient.dll",
+        "lib/netstandard2.1/DnsClient.xml"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Abstractions/2.0.0": {
+      "sha512": "6ZCllUYGFukkymSTx3Yr0G/ajRxoNJp7/FqSxSB4fGISST54ifBhgu4Nc0ItGi3i6DqwuNd8SUyObmiC++AO2Q==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.abstractions/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Win32.Registry/5.0.0": {
+      "sha512": "dDoKi0PnDz31yAyETfRntsLArTlVAVzUzCIvvEDsDsucrl33Dl8pIJG06ePTJTI3tGpeyHS9Cq7Foc/s4EeKcg==",
+      "type": "package",
+      "path": "microsoft.win32.registry/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/Microsoft.Win32.Registry.dll",
+        "lib/net461/Microsoft.Win32.Registry.dll",
+        "lib/net461/Microsoft.Win32.Registry.xml",
+        "lib/netstandard1.3/Microsoft.Win32.Registry.dll",
+        "lib/netstandard2.0/Microsoft.Win32.Registry.dll",
+        "lib/netstandard2.0/Microsoft.Win32.Registry.xml",
+        "microsoft.win32.registry.5.0.0.nupkg.sha512",
+        "microsoft.win32.registry.nuspec",
+        "ref/net46/Microsoft.Win32.Registry.dll",
+        "ref/net461/Microsoft.Win32.Registry.dll",
+        "ref/net461/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/Microsoft.Win32.Registry.dll",
+        "ref/netstandard1.3/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/de/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/es/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/fr/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/it/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/ja/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/ko/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/ru/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/zh-hans/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/zh-hant/Microsoft.Win32.Registry.xml",
+        "ref/netstandard2.0/Microsoft.Win32.Registry.dll",
+        "ref/netstandard2.0/Microsoft.Win32.Registry.xml",
+        "runtimes/win/lib/net46/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/net461/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/net461/Microsoft.Win32.Registry.xml",
+        "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "MongoDB.Bson/2.18.0": {
+      "sha512": "iyiVjkCAZIUiyYDZXXUqISeW7n3O/qcM90PUeJybryg7g4rXhSMRY0oLpAg+NdoXD/Qm9LlmVIePAluHQB91tQ==",
+      "type": "package",
+      "path": "mongodb.bson/2.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "lib/net472/MongoDB.Bson.dll",
+        "lib/net472/MongoDB.Bson.xml",
+        "lib/netstandard2.0/MongoDB.Bson.dll",
+        "lib/netstandard2.0/MongoDB.Bson.xml",
+        "lib/netstandard2.1/MongoDB.Bson.dll",
+        "lib/netstandard2.1/MongoDB.Bson.xml",
+        "mongodb.bson.2.18.0.nupkg.sha512",
+        "mongodb.bson.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "MongoDB.Driver/2.18.0": {
+      "sha512": "nq7wRMeNoqUe+bndHFMDGX8IY3iSmzLoyLzzf8DRos137O+5R4NCsd9qtw/n+DoGFas0gzzyD546Cpz+5AkmLg==",
+      "type": "package",
+      "path": "mongodb.driver/2.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "lib/net472/MongoDB.Driver.dll",
+        "lib/net472/MongoDB.Driver.xml",
+        "lib/netstandard2.0/MongoDB.Driver.dll",
+        "lib/netstandard2.0/MongoDB.Driver.xml",
+        "lib/netstandard2.1/MongoDB.Driver.dll",
+        "lib/netstandard2.1/MongoDB.Driver.xml",
+        "mongodb.driver.2.18.0.nupkg.sha512",
+        "mongodb.driver.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "MongoDB.Driver.Core/2.18.0": {
+      "sha512": "/X5Ty32gyDyzs/fWFwKGS0QUhfQT3V9Sc/F8yhILBu8bjCjBscOFKQsKieAha8xxBnYS7dZvTvhvEJWT7HgJ1g==",
+      "type": "package",
+      "path": "mongodb.driver.core/2.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "THIRD-PARTY-NOTICES",
+        "lib/net472/MongoDB.Driver.Core.dll",
+        "lib/net472/MongoDB.Driver.Core.xml",
+        "lib/netstandard2.0/MongoDB.Driver.Core.dll",
+        "lib/netstandard2.0/MongoDB.Driver.Core.xml",
+        "lib/netstandard2.1/MongoDB.Driver.Core.dll",
+        "lib/netstandard2.1/MongoDB.Driver.Core.xml",
+        "mongodb.driver.core.2.18.0.nupkg.sha512",
+        "mongodb.driver.core.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "MongoDB.Libmongocrypt/1.6.0": {
+      "sha512": "kh+MMf+ECIf5sQDIqOdKBd75ktD5aD1EuzCX3R4HOUGPlAbeAm8harf4zwlbvFe2BLfCXZO7HajSABLf4P0GNg==",
+      "type": "package",
+      "path": "mongodb.libmongocrypt/1.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/MongoDB.Libmongocrypt.targets",
+        "content/libmongocrypt.dylib",
+        "content/libmongocrypt.so",
+        "content/mongocrypt.dll",
+        "contentFiles/any/net472/libmongocrypt.dylib",
+        "contentFiles/any/net472/libmongocrypt.so",
+        "contentFiles/any/net472/mongocrypt.dll",
+        "contentFiles/any/netstandard2.0/libmongocrypt.dylib",
+        "contentFiles/any/netstandard2.0/libmongocrypt.so",
+        "contentFiles/any/netstandard2.0/mongocrypt.dll",
+        "contentFiles/any/netstandard2.1/libmongocrypt.dylib",
+        "contentFiles/any/netstandard2.1/libmongocrypt.so",
+        "contentFiles/any/netstandard2.1/mongocrypt.dll",
+        "lib/net472/MongoDB.Libmongocrypt.dll",
+        "lib/netstandard2.0/MongoDB.Libmongocrypt.dll",
+        "lib/netstandard2.1/MongoDB.Libmongocrypt.dll",
+        "mongodb.libmongocrypt.1.6.0.nupkg.sha512",
+        "mongodb.libmongocrypt.nuspec",
+        "runtimes/linux/native/libmongocrypt.so",
+        "runtimes/osx/native/libmongocrypt.dylib",
+        "runtimes/win/native/mongocrypt.dll"
+      ]
+    },
+    "SharpCompress/0.30.1": {
+      "sha512": "XqD4TpfyYGa7QTPzaGlMVbcecKnXy4YmYLDWrU+JIj7IuRNl7DH2END+Ll7ekWIY8o3dAMWLFDE1xdhfIWD1nw==",
+      "type": "package",
+      "path": "sharpcompress/0.30.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/SharpCompress.dll",
+        "lib/net5.0/SharpCompress.dll",
+        "lib/netcoreapp3.1/SharpCompress.dll",
+        "lib/netstandard2.0/SharpCompress.dll",
+        "lib/netstandard2.1/SharpCompress.dll",
+        "sharpcompress.0.30.1.nupkg.sha512",
+        "sharpcompress.nuspec"
+      ]
+    },
+    "Snappier/1.0.0": {
+      "sha512": "rFtK2KEI9hIe8gtx3a0YDXdHOpedIf9wYCEYtBEmtlyiWVX3XlCNV03JrmmAi/Cdfn7dxK+k0sjjcLv4fpHnqA==",
+      "type": "package",
+      "path": "snappier/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "COPYING.txt",
+        "lib/net5.0/Snappier.dll",
+        "lib/net5.0/Snappier.xml",
+        "lib/netcoreapp3.0/Snappier.dll",
+        "lib/netcoreapp3.0/Snappier.xml",
+        "lib/netstandard2.0/Snappier.dll",
+        "lib/netstandard2.0/Snappier.xml",
+        "lib/netstandard2.1/Snappier.dll",
+        "lib/netstandard2.1/Snappier.xml",
+        "snappier.1.0.0.nupkg.sha512",
+        "snappier.nuspec"
+      ]
+    },
+    "System.Buffers/4.5.1": {
+      "sha512": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "type": "package",
+      "path": "system.buffers/4.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Buffers.dll",
+        "lib/net461/System.Buffers.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.1.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
@@ -1836,6 +2059,181 @@
         "ref/xamarinwatchos10/_._",
         "system.numerics.vectors.4.5.0.nupkg.sha512",
         "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+      "sha512": "ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.AccessControl/5.0.0": {
+      "sha512": "dagJ1mHZO3Ani8GH0PHpPEe/oYO+rVdbQjvjJkBRNQkX4t0r1iaeGn8+/ybkSLEan3/slM0t59SVdHzuHf2jmw==",
+      "type": "package",
+      "path": "system.security.accesscontrol/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.AccessControl.dll",
+        "lib/net461/System.Security.AccessControl.dll",
+        "lib/net461/System.Security.AccessControl.xml",
+        "lib/netstandard1.3/System.Security.AccessControl.dll",
+        "lib/netstandard2.0/System.Security.AccessControl.dll",
+        "lib/netstandard2.0/System.Security.AccessControl.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net46/System.Security.AccessControl.dll",
+        "ref/net461/System.Security.AccessControl.dll",
+        "ref/net461/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/System.Security.AccessControl.dll",
+        "ref/netstandard1.3/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/de/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/es/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/fr/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/it/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ja/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ko/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ru/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.AccessControl.xml",
+        "ref/netstandard2.0/System.Security.AccessControl.dll",
+        "ref/netstandard2.0/System.Security.AccessControl.xml",
+        "ref/uap10.0.16299/_._",
+        "runtimes/win/lib/net46/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Security.AccessControl.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.xml",
+        "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.accesscontrol.5.0.0.nupkg.sha512",
+        "system.security.accesscontrol.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.Principal.Windows/5.0.0": {
+      "sha512": "t0MGLukB5WAVU9bO3MGzvlGnyJPgUlcwerXn1kzBRjwLKixT96XV0Uza41W49gVd8zEMFu9vQEFlv0IOrytICA==",
+      "type": "package",
+      "path": "system.security.principal.windows/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.Principal.Windows.dll",
+        "lib/net461/System.Security.Principal.Windows.dll",
+        "lib/net461/System.Security.Principal.Windows.xml",
+        "lib/netstandard1.3/System.Security.Principal.Windows.dll",
+        "lib/netstandard2.0/System.Security.Principal.Windows.dll",
+        "lib/netstandard2.0/System.Security.Principal.Windows.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net46/System.Security.Principal.Windows.dll",
+        "ref/net461/System.Security.Principal.Windows.dll",
+        "ref/net461/System.Security.Principal.Windows.xml",
+        "ref/netcoreapp3.0/System.Security.Principal.Windows.dll",
+        "ref/netcoreapp3.0/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/System.Security.Principal.Windows.dll",
+        "ref/netstandard1.3/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/de/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/es/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/fr/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/it/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ja/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ko/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ru/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.Principal.Windows.xml",
+        "ref/netstandard2.0/System.Security.Principal.Windows.dll",
+        "ref/netstandard2.0/System.Security.Principal.Windows.xml",
+        "ref/uap10.0.16299/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
+        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/net46/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net461/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net461/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.principal.windows.5.0.0.nupkg.sha512",
+        "system.security.principal.windows.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Text.Encoding.CodePages/5.0.0": {
+      "sha512": "NyscU59xX6Uo91qvhOs2Ccho3AR2TnZPomo1Z0K6YpyztBPM/A5VbkzOO19sy3A3i1TtEnTxA7bCe3Us+r5MWg==",
+      "type": "package",
+      "path": "system.text.encoding.codepages/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Text.Encoding.CodePages.dll",
+        "lib/net461/System.Text.Encoding.CodePages.dll",
+        "lib/net461/System.Text.Encoding.CodePages.xml",
+        "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "system.text.encoding.codepages.5.0.0.nupkg.sha512",
+        "system.text.encoding.codepages.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -3394,6 +3792,23 @@
         "xamarin.google.guava.listenablefuture.nuspec"
       ]
     },
+    "ZstdSharp.Port/0.6.2": {
+      "sha512": "jPao/LdUNLUz8rn3H1D8W7wQbZsRZM0iayvWI4xGejJg3XJHT56gcmYdgmCGPdJF1UEBqUjucCRrFB+4HbJsbw==",
+      "type": "package",
+      "path": "zstdsharp.port/0.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/ZstdSharp.dll",
+        "lib/net5.0/ZstdSharp.dll",
+        "lib/net6.0/ZstdSharp.dll",
+        "lib/netcoreapp3.1/ZstdSharp.dll",
+        "lib/netstandard2.0/ZstdSharp.dll",
+        "lib/netstandard2.1/ZstdSharp.dll",
+        "zstdsharp.port.0.6.2.nupkg.sha512",
+        "zstdsharp.port.nuspec"
+      ]
+    },
     "YNS/1.0.0": {
       "type": "project",
       "path": "../YNS/YNS.csproj",
@@ -3402,31 +3817,27 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v13.0": [
+      "MongoDB.Driver >= 2.18.0",
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2196",
       "YNS >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\svent\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\NovaFoxy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\YNS\\YNS\\YNS.Android\\YNS.Android.csproj",
+      "projectUniqueName": "C:\\Users\\NovaFoxy\\Documents\\YNS2\\YNS\\YNS.Android\\YNS.Android.csproj",
       "projectName": "YNS.Android",
-      "projectPath": "D:\\YNS\\YNS\\YNS.Android\\YNS.Android.csproj",
-      "packagesPath": "C:\\Users\\svent\\.nuget\\packages\\",
-      "outputPath": "D:\\YNS\\YNS\\YNS.Android\\obj\\",
+      "projectPath": "C:\\Users\\NovaFoxy\\Documents\\YNS2\\YNS\\YNS.Android\\YNS.Android.csproj",
+      "packagesPath": "C:\\Users\\NovaFoxy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NovaFoxy\\Documents\\YNS2\\YNS\\YNS.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\svent\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\NovaFoxy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3439,8 +3850,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "D:\\YNS\\YNS\\YNS\\YNS.csproj": {
-              "projectPath": "D:\\YNS\\YNS\\YNS\\YNS.csproj"
+            "C:\\Users\\NovaFoxy\\Documents\\YNS2\\YNS\\YNS\\YNS.csproj": {
+              "projectPath": "C:\\Users\\NovaFoxy\\Documents\\YNS2\\YNS\\YNS\\YNS.csproj"
             }
           }
         }
@@ -3449,6 +3860,10 @@
     "frameworks": {
       "monoandroid13.0": {
         "dependencies": {
+          "MongoDB.Driver": {
+            "target": "Package",
+            "version": "[2.18.0, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.0, )"

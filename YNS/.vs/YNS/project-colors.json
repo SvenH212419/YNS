@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "282c4138-1426-43c6-a3aa-1bc976f8c0e4": {
+      "ProjectGuid": "282c4138-1426-43c6-a3aa-1bc976f8c0e4",
+      "DisplayName": "YNS",
+      "ColorIndex": 0
+    },
+    "e1e40311-13e1-4451-93fe-d9c6c60ea305": {
+      "ProjectGuid": "e1e40311-13e1-4451-93fe-d9c6c60ea305",
+      "DisplayName": "YNS.Android",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

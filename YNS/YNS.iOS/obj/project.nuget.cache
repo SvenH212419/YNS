@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "RrRb77o9cThDrx/560L07uX02b36umwETQaVc7zsFQh7oIhHepJOsJGl8Tz8JcVUGtTH8UPV6x5fUaX9rymb3Q==",
+  "dgSpecHash": "CZbzoSyaoPDZSgYL6kwAlivqaoHj+V6wR2I07Mvj/hlqRXhCTa3B8lW+nlmp96Ka0amzc1GKv1zPKIyfG1NLqw==",
   "success": true,
-  "projectFilePath": "D:\\YNS\\YNS\\YNS.iOS\\YNS.iOS.csproj",
+  "projectFilePath": "C:\\Users\\NovaFoxy\\Documents\\YNS2\\YNS\\YNS.iOS\\YNS.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\svent\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\svent\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\svent\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\NovaFoxy\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\NovaFoxy\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\NovaFoxy\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
   "logs": []
 }
