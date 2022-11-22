@@ -24,9 +24,9 @@ namespace YNS.ViewModels
                 var settings = MongoClientSettings.FromConnectionString("mongodb+srv://NovaFoxy:<Kyuubi99>@maincluster.jtr1q.mongodb.net/?retryWrites=true&w=majority");
                 settings.ServerApi = new ServerApi(ServerApiVersion.V1);
                 var client = new MongoClient(settings);
-                var database = client.GetDatabase("test");
+                var database = client.GetDatabase("FoxFinder");
 
-                var collection = database.GetCollection<BsonDocument>("test");
+                var collection = database.GetCollection<BsonDocument>("Media");
 
                 Console.WriteLine("Data from MongoDB Database");
                 collection.Find(new BsonDocument()).ForEachAsync(X => Console.WriteLine(X));

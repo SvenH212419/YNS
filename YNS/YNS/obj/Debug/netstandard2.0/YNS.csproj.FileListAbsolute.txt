@@ -18,3 +18,23 @@ C:\Users\NovaFoxy\Documents\YNS2\YNS\YNS\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\NovaFoxy\Documents\YNS2\YNS\YNS\obj\Debug\netstandard2.0\YNS.dll
 C:\Users\NovaFoxy\Documents\YNS2\YNS\YNS\obj\Debug\netstandard2.0\ref\YNS.dll
 C:\Users\NovaFoxy\Documents\YNS2\YNS\YNS\obj\Debug\netstandard2.0\YNS.pdb
+D:\YNS GIT\YNS\YNS\YNS\bin\Debug\netstandard2.0\YNS.deps.json
+D:\YNS GIT\YNS\YNS\YNS\bin\Debug\netstandard2.0\YNS.dll
+D:\YNS GIT\YNS\YNS\YNS\bin\Debug\netstandard2.0\YNS.pdb
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\YNS.csproj.AssemblyReference.cache
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\YNS.GeneratedMSBuildEditorConfig.editorconfig
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\YNS.AssemblyInfoInputs.cache
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\YNS.AssemblyInfo.cs
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\YNS.csproj.CoreCompileInputs.cache
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\XamlC.stamp
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\YNS.dll
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\refint\YNS.dll
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\YNS.pdb
+D:\YNS GIT\YNS\YNS\YNS\obj\Debug\netstandard2.0\ref\YNS.dll
