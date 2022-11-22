@@ -4,10 +4,12 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using MongoDB.Driver;
+using MongoDB.Bson;
 
 namespace YNS.Droid
 {
-    [Activity(Label = "YNS", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
+    [Activity(Label = "YNS", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -25,19 +27,23 @@ namespace YNS.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
-    public MongoDB()
+
+    public class MongoDB
     {
-        
-        var settings = MongoClientSettings.FromConnectionString("mongodb+srv://NovaFoxy:<Kyuubi99>@maincluster.jtr1q.mongodb.net/?retryWrites=true&w=majority");
-        settings.ServerApi = new ServerApi(ServerApiVersion.V1);
-        var client = new MongoClient(settings);
-        var database = client.GetDatabase("test");
+        public MongoDB()
+        {
 
-        var collection = database.GetCollection<BsonDocument>("test");
+            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://NovaFoxy:<Kyuubi99>@maincluster.jtr1q.mongodb.net/?retryWrites=true&w=majority");
+            settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+            var client = new MongoClient(settings);
+            var database = client.GetDatabase("FoxFinder");
 
-        Console.WriteLine("Data from MongoDB Database");
-        collection.Find(new BsonDocument()).ForEachAsync(X => Console.WriteLine(X));
+            var collection = database.GetCollection<BsonDocument>("Media");
 
-        Console.Read();
+            Console.WriteLine("Data from MongoDB Database");
+            collection.Find(new BsonDocument()).ForEachAsync(X => Console.WriteLine(X));
+
+            Console.Read();
+        }
     }
 }
